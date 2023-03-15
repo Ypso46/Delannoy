@@ -7,14 +7,12 @@ int main() {
     std::cout << "How many lines do you want: " << std::endl;
     std::cin >> userInput;
 
-    int spaces = 0;
-
-    for(int i = 1, k = 0; i <= userInput; ++i, k = 0) {
-        for(spaces = 1; spaces <= userInput-i; ++spaces) {
-            std::cout <<"  ";
+    for (int i = 1, k = 0; i <= userInput; ++i, k = 0) {
+        for (int spaces = 1; spaces <= userInput - i; ++spaces) {
+            std::cout << "  ";
         }
 
-        while(k != 2*i-1) {
+        while (k != 2 * i - 1) {
             std::cout << "* ";
             ++k;
         }
