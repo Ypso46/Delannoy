@@ -24,14 +24,14 @@ int main() {
     std::cout << "Sum: " << sum << std::endl;
 
     //with do while loop
-    int i, n, sum;
-    sum = 0;
-    i = 0;
-    do {
-        std::cout << "Enter a number: " << std::endl;
-        std::cin >> n;
-        sum += n;
-        i++;
-    } while (i < 4);
-    std::cout << "Sum: " << sum << std::endl;
-}
+//    int i, n, sum;
+//    sum = 0;
+//    i = 0;
+//    do {
+//        std::cout << "Enter a number: " << std::endl;
+//        std::cin >> n;
+//        sum += n;
+//        i++;
+//    } while (i < 4);
+//    std::cout << "Sum: " << sum << std::endl;
+//}
