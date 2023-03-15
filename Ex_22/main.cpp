@@ -3,23 +3,27 @@
 int main() {
     //Enter as much value as you want between 0 and 20. Write a program that determine which one is the max and the min and how many times they where define.
 
-    std::cout << "Enter number between 0 and 20: (when you're done, enter -1)" << std::endl;
+    std::cout << "Enter numbers between 0 and 20: (when you're done, enter -1)" << std::endl;
 
     int userInput = 0;
     int max = 0;
-    int min = 0;
+    int min = 20;
     int nbMax = 0;
     int nbMin = 0;
     bool control = true;
-
-    max = min = userInput;
+    int nbIter = 0;
 
     while (control) {
         std::cin >> userInput;
         if (userInput == - 1) {
             control = false;
             continue;
-        } else if (userInput >= max) {
+        }
+        if (nbIter == 0) {
+            min = max = userInput;
+            nbIter++;
+        }
+        if (userInput >= max) {
             int tempMax = max;
             max = userInput;
             if (tempMax == max) {
@@ -42,5 +46,4 @@ int main() {
 
     std::cout << "The min value is: " << min << " and it appears " << nbMin << " times" << std::endl;
     std::cout << "The max value is: " << max << " and it appears " << nbMax << " times" << std::endl;
-
 }
