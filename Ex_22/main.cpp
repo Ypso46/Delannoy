@@ -6,22 +6,17 @@ int main() {
     std::cout << "Enter numbers between 0 and 20: (when you're done, enter -1)" << std::endl;
 
     int userInput = 0;
-    int max = 0;
-    int min = 20;
+    int max = -1;
+    int min = 21;
     int nbMax = 0;
     int nbMin = 0;
     bool control = true;
-    int nbIter = 0;
 
     while (control) {
         std::cin >> userInput;
         if (userInput == - 1) {
             control = false;
             continue;
-        }
-        if (nbIter == 0) {
-            min = max = userInput;
-            nbIter++;
         }
         if (userInput >= max) {
             int tempMax = max;
@@ -44,6 +39,10 @@ int main() {
 
     }
 
-    std::cout << "The min value is: " << min << " and it appears " << nbMin << " times" << std::endl;
-    std::cout << "The max value is: " << max << " and it appears " << nbMax << " times" << std::endl;
+    if (max >= 0) {
+        std::cout << "The min value is: " << min << " and it appears " << nbMin << " times" << std::endl;
+        std::cout << "The max value is: " << max << " and it appears " << nbMax << " times" << std::endl;
+    } else {
+        std::cout << "You don't have entered any note!" << std::endl;
+    }
 }
