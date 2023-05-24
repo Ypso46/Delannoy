@@ -3,6 +3,8 @@
 float operation(float x, float y, char c);
 
 int main() {
+    //Write a function that take two numbers and an operation character and return the result of the four operations
+
     int x, y;
     std::cout << "Enter two numbers: " << std::endl;
     std::cin >> x >> y;
